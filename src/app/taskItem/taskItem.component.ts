@@ -19,8 +19,7 @@ export class taskItem
 
    toggle(task:any)
    {
-        task.completed = !task.completed;
-        console.log("dsa:" , task);
+        
    }
    
 }

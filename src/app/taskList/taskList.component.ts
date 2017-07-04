@@ -1,8 +1,9 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { task } from '../shared/task'
 
 
 import  { taskItem }  from '../taskItem/taskItem.component';
+import { TaskService } from '../shared/task.service'
 
 
 
@@ -14,17 +15,20 @@ import  { taskItem }  from '../taskItem/taskItem.component';
         styleUrls :["./taskList.component.css","../app.component.css"]
     }
 )
-export class taskList
+export class taskList implements OnInit
 {
-  @Input()lTask:task[];
+  constructor(private taskService:TaskService){
+      this.lTask = [];
+  }
+  ngOnInit(){
+    this.lTask = this.taskService.getTasks();
+  }
+
+
+  lTask:task[];
 
   remove(task:any)
   {
-      console.log("delete");
-      let index = this.lTask.indexOf(task);
-      if(index > -1)
-      {
-        this.lTask.splice(index,1);
-      }
+      this.taskService.delete(task);
   }
 }

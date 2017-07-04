@@ -19,11 +19,4 @@ const lTask:task[] = [
 export class AppComponent {
   
     title  = "Angular"
-
-    tasks:task[] = lTask;
-    create(title:string)
-    {
-        const Task = new task(title);
-        this.tasks.push(Task);
-    }
 }
