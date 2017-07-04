@@ -1,0 +1,15 @@
+
+    <div class = "collection-item" ng-if="lTask" [class.completed] ="task.completed">
+      <div class="switch">
+          <label>
+          Not Done
+          <input type="checkbox" *ngIf="task.completed" checked (click)="toggle(task)">
+          <input type="checkbox" *ngIf="!task.completed" (click)="toggle(task)">
+          <span class="lever"></span>
+          Done 
+          </label>
+       </div>
+       <span>&nbsp;&nbsp; {{task.title}}</span>
+       <a class="btn-floating btn-small blue" (click) = "onRemove()">del</a>
+    </div>
+

@@ -1,0 +1,52 @@
+
+.nav-wrapper
+{
+    background-color: blue;
+}
+
+
+.collection
+{
+    top : 0px;
+    margin: 0 auto;
+    width: 80%;
+    margin-top :10px;
+}
+.collection-item
+{
+    position: relative;
+    height: 43px;
+}
+
+
+.switch 
+{
+    display: inline;
+}
+
+.btn-floating
+{
+    position: absolute;
+    top:5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-align: top;
+}
+
+div.col.s4.m4
+{
+    margin-top: 20px;
+}
+
+form.col
+{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.btn
+{
+    background-color: blue;
+}

@@ -1,0 +1,21 @@
+<!--<div class = "collection">
+    <div class = "collection-item" *ngFor = "let task of lTask" ng-if="lTask" [class.completed] ="task.completed">
+      <div class="switch">
+          <label>
+          Not Done
+          <input type="checkbox" *ngIf="task.completed" checked (click)="toggle(task)">
+          <input type="checkbox" *ngIf="!task.completed" (click)="toggle(task)">
+          <span class="lever"></span>
+          Done 
+          </label>
+       </div>
+       <span>&nbsp;&nbsp; {{task.title}}</span>
+       <a class="btn-floating btn-small blue" (click) = "remove(task)">del</a>
+    </div>
+</div>
+-->
+
+
+<div class = "collection">
+    <taskItem *ngFor = "let task of lTask" [task] = "task"  (delete) = "remove(task)"></taskItem>
+</div>
